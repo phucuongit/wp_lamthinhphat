@@ -21,7 +21,7 @@ $page_sidebars = get_theme_mod('sml_single_page_layout_sidebars','right-sidebar-
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main">
                 <div class="google_map_contact" data-stretch="full-stretch" >
-					<?= do_shortcode('[siteorigin_widget class="SiteOrigin_Widget_GoogleMap_Widget"][/siteorigin_widget]');?>
+					<?= do_shortcode('[SHOW_GOOGLEMAP]');?>
 				</div>
                     <div class="panel-grid panel-no-style">
                         <div id="pgc-211-1-0" class="panel-grid-cell">
