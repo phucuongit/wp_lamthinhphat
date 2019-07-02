@@ -20,7 +20,6 @@ $page_sidebars = get_theme_mod('sml_single_page_layout_sidebars','right-sidebar-
 		<div class="sml-page-wrap <?php echo esc_attr($page_sidebars); ?>">
 			<div id="primary" class="content-area">
 				<main id="main" class="site-main">
-
 				<?php
 				while ( have_posts() ) :
 					the_post();

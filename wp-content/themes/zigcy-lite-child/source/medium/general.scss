@@ -16,10 +16,28 @@ textarea,
 .product-subtitle,
 .top-header-left-text,
 .lat-pro-title,
+a.added_to_cart,
 .lat-pro-subtitle,
 .n2-ss-layer .n2-ow {
   font-family: "Roboto", sans-serif !important;
 }
 .header-two .search-form-wrap h3{
     font-size: 30px!important;
+}
+#pgc-211-1-0, #pgc-211-1-1 {
+    width: 50%;
+    width: calc(50% - ( 0.5 * 30px ) );
+}
+.panel-grid.panel-no-style{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+.panel-layout{
+    #pg-211-1{
+        .panel-grid-cell{
+            width: 100%;
+        }
+    }
 }
