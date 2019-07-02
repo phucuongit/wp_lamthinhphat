@@ -162,6 +162,9 @@ function translate_text_strings( $translated_text, $text, $domain ) {
         case 'Lựa chọn các tùy chọn':
 			$translated_text = __( 'Xem sản phẩm', 'woocommerce' );
             break;
+        case 'Đọc tiếp':
+			$translated_text = __( 'Xem sản phẩm', 'woocommerce' );
+            break;
 	}
 	return $translated_text;
 }
@@ -252,14 +255,22 @@ function misha_one_err( $fields, $errors ){
 	}
  
 }
-// function wpse_284393_checkout_message( $data, $errors ) {
-//     if ( empty( $errors ) ) {
-//         return;
-//     }
+/** TẠO THEME OPTION */
 
-//     $shipping_error = $errors->get_error_message( 'billing' );
+if( function_exists('acf_add_options_page') ) {
+	
+    acf_add_options_page(array(
+		'page_title' 	=> 'Thiết lập giao diện',
+		'menu_title'	=> 'Thiết lập giao diện',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+}
+function my_acf_init() {
+	
+	acf_update_setting('google_api_key', 'AIzaSyDCLRdxYB3egnDTvXBwnATl3WM3tpcBBEc');
+}
 
-//         $errors->remove( 'billing' );
-//         $errors->add( 'billing', 'hello' );
-// }
-// add_action( 'woocommerce_after_checkout_validation', 'wpse_284393_checkout_message' );
+add_action('acf/init', 'my_acf_init');
