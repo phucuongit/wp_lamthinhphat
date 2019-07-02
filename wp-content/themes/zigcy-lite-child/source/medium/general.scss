@@ -1,6 +1,25 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=vietnamese');
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=vietnamese");
 
 /* Custom font */
-.main-navigation ul > li a{
-    font-family: 'Roboto', sans-serif!important;
+body,
+button,
+input,
+select,
+optgroup,
+textarea,
+.sml-add-to-cart-wrap a.add_to_cart_button.button,
+.plx_lat_prod_cat_section a.button.ajax_add_to_cart,
+.plx_lat_prod_cat_section a.button.add_to_cart_button,
+.plx_lat_prod_cat_section span.price,
+.main-navigation ul > li a,
+.product-title,
+.product-subtitle,
+.top-header-left-text,
+.lat-pro-title,
+.lat-pro-subtitle,
+.n2-ss-layer .n2-ow {
+  font-family: "Roboto", sans-serif !important;
+}
+.header-two .search-form-wrap h3{
+    font-size: 30px!important;
 }
