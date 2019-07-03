@@ -192,11 +192,22 @@ footer .store-mart-lite-container.clearfix {
 }
 
 @media (max-width: 991px) {
-  .mob-side-nav-wrapp.active .search-wrapp input[type=search] {
+  .mob-side-nav-wrapp .search-wrapp input[type=search] {
     width: 100% !important;
   }
 
-  .mob-side-nav-wrapp.active .search-wrapp button[type=submit] {
+  .mob-side-nav-wrapp .search-wrapp button[type=submit] {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    height: 45px;
+    width: 45px;
+    opacity: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  .mob-side-nav-wrapp .search-wrapp button[type=submit]:active {
     position: absolute;
     top: 0px;
     right: 0;
