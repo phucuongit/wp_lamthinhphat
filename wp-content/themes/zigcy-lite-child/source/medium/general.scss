@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=vietnamese");
-
+$main_color: #51aa1b;
 /* Custom font */
 body,
 button,
@@ -106,5 +106,49 @@ footer{
         align-items: center;
     display: flex;
     justify-content: center;
+    }
+}
+.woocommerce ul.products li.product .woocommerce-loop-product__title{
+    margin-top: 10px;
+}
+.store-mart-lite-lat-prod-cat-wrap{
+    .sml-latest-prod-add-to-cart{
+        a{
+            color: #222!important;
+            transition: all .4s cubic-bezier(.77,0,.175,1);
+            background-color: transparent!important;
+            &::before{
+                content: "";
+                position: absolute;
+                z-index: -1;
+                left: 0;
+                right: 100%;
+                bottom: 0;
+                background: #51aa1b;
+                height: 2px;
+                -webkit-transition-property: right;
+                transition-property: right;
+                -webkit-transition-duration: 0.3s;
+                transition-duration: 0.3s;
+                -webkit-transition-timing-function: ease-out;
+                transition-timing-function: ease-out;
+              
+            }
+            &:hover:before, &:focus:before, &:active:before {
+                right: 0;
+            }
+        }
+        
+    }
+}
+       
+.return-to-shop{
+    a.button.wc-backward{
+        background-color: transparent;
+        color: black;
+        &:hover{
+            background-color: transparent;
+            color: #51aa1b;
+        }
     }
 }

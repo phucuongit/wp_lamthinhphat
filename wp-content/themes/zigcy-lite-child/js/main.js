@@ -22,6 +22,19 @@ jQuery(function($){
             wrapper.addClass('woocommerce-validated'); // success
         }
     });
+    $('body').on('blur change', '#billing_email', function(){
+        var wrapper = $(this).closest('.form-row');
+
+        var patt = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
+        var result = $(this).val().match(patt);
+        // you do not have to removeClass() because Woo do it in checkout.js
+        if( !(result) ||$(this).val().length == 0 ) { // check if contains numbers
+            wrapper.removeClass('woocommerce-validated');
+            wrapper.addClass('woocommerce-invalid woocommerce-invalid-required-field'); // error
+        } else {
+            wrapper.addClass('woocommerce-validated'); // success
+        }
+    });
     (function(){
         var widthContainer = $('.container').width();
         var widthWindow = $(window).width();

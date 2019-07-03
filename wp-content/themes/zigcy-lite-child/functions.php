@@ -206,55 +206,23 @@ add_action('woocommerce_checkout_process', 'devvn_validate_phone_field_process' 
 function devvn_validate_phone_field_process() {
    
     $billing_phone = filter_input(INPUT_POST, 'billing_phone');
-    if ( ! (preg_match('/^(0[35789]|09)[0-9]{8}$/', $billing_phone )) ){
+    if ( ! (preg_match('/^(0[35789]|09)[0-9]{8}$/', $billing_phone )) && !empty( $billing_phone )){
         wc_add_notice( "Xin nhập đúng <strong>số điện thoại</strong> của bạn"  ,'error' );
     }
     $billing_first_name = filter_input(INPUT_POST, 'billing_first_name');
-    if ( (preg_match('/[0-9]+/', $billing_first_name )) ){
+
+    if ( (preg_match('/[0-9]+/', $billing_first_name )) && !empty( $billing_first_name ) ){
         wc_add_notice( "Xin nhập đúng <strong>họ và tên</strong> của bạn"  ,'error' );
     }
+
+    $billing_email = filter_input(INPUT_POST, 'billing_email');
+
+    if ( (preg_match("/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/", $billing_email )) && !empty( $billing_email ) ){
+        wc_add_notice( "Xin nhập đúng <strong>địa chỉ email</strong> của bạn"  ,'error' );
+    }
 }
 
-/** CUSTOM ALERT THÔNG BÁO NHẬP SAI PAGE CHECK OUT */
 
-add_action('woocommerce_checkout_process', 'misha_check_if_selected');
- 
-function misha_check_if_selected() {
-  
-    // you can add any custom validations here
-    if ( empty( $_POST['billing_first_name'] ) ){
-        wc_add_notice( 'Xin nhập đúng <strong>họ và tên</strong> của bạn', 'error' );
-    }
-	if ( empty( $_POST['billing_address_1'] ) ){
-        wc_add_notice( 'Xin nhập đúng <strong>địa chỉ giao hàng</strong> của bạn', 'error' );
-    }
-    if ( empty( $_POST['billing_state'] ) ){
-        wc_add_notice( 'Xin nhập đúng <strong>Quận/Huyện/Khu vực</strong> của bạn', 'error' );
-    }
-    if ( empty( $_POST['billing_email'] ) ){
-        wc_add_notice( 'Xin nhập đúng <strong>địa chỉ email</strong> của bạn', 'error' );
-    }
- 
-}
-
-// add_action( 'woocommerce_after_checkout_validation', 'misha_one_err', 9999, 2);
- 
-// function misha_one_err( $fields, $errors ){
- 
-// 	// if any validation errors
-// 	if( !empty( $errors->get_error_codes() ) ) {
- 
-// 		// remove all of them
-// 		foreach( $errors->get_error_codes() as $code ) {
-// 			$errors->remove( $code );
-// 		}
- 
-// 		// add our custom one
-// 		//$errors->add( 'validation', 'Please fill the fields!' );
- 
-// 	}
- 
-// }
 
 /** TẠO THEME OPTION */
 
@@ -476,7 +444,7 @@ add_action( 'phpmailer_init', function( $phpmailer ) {
     $phpmailer->Port       = 587;
     $phpmailer->Username   = ''.$userName.'';
     $phpmailer->Password   = ''.$passWord.'';
-    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->SMTPSecure = 'SSL';
     $phpmailer->From       = ''.$userName.'';
     $phpmailer->FromName   = ''.$contentText.'';
 });
