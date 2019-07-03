@@ -448,3 +448,4 @@ add_action( 'phpmailer_init', function( $phpmailer ) {
     $phpmailer->From       = ''.$userName.'';
     $phpmailer->FromName   = ''.$contentText.'';
 });
+

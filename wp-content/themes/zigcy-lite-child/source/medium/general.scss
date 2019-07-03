@@ -3,6 +3,7 @@ $main_color: #51aa1b;
 /* Custom font */
 body,
 button,
+.store-mart-lite-section-footer-wrap-main h2,
 input,
 select,
 optgroup,
@@ -11,6 +12,7 @@ textarea,
 .plx_lat_prod_cat_section a.button.ajax_add_to_cart,
 .plx_lat_prod_cat_section a.button.add_to_cart_button,
 .plx_lat_prod_cat_section span.price,
+.store-mart-lite-section-footer-wrap-main ul li a,
 .main-navigation ul > li a,
 .product-title,
 .product-subtitle,
@@ -151,4 +153,10 @@ footer{
             color: #51aa1b;
         }
     }
+}
+.col-3 .block.footer-widget-1{
+    border-right: none!important;
+}
+#pg-211-1.panel-grid.panel-no-style{
+    padding-top: 0px;
 }
