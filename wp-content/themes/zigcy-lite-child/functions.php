@@ -170,6 +170,9 @@ function translate_text_strings( $translated_text, $text, $domain ) {
         case 'Rấ tiếc, phiên truy cập của bạn đã hết hạn. ':
 			$translated_text = __( 'Rất tiếc, phiên truy cập của bạn đã hết hạn. ', 'woocommerce' );
             break;
+        case 'Compare':
+			$translated_text = __( 'So sánh', 'woocommerce' );
+            break;
 	}
 	return $translated_text;
 }
