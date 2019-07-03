@@ -1,0 +1,15 @@
+.search-wrapp{
+    input[type="search"]{
+        width: 100%!important;
+    }
+    button[type="submit"]{
+        position: absolute;
+        top: 0px;
+        right: 0;
+        height: 45px;
+        width: 45px;
+        opacity: 0;
+        z-index: 1;
+        cursor: pointer;
+    }
+}

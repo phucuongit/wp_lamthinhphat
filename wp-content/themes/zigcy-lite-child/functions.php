@@ -1,12 +1,4 @@
 <?php
-add_action('wp_enqueue_scripts', 'zigcy_lite_child_enqueue_styles');
-function zigcy_lite_child_enqueue_styles()
-{
-    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get('Version'));
-    wp_enqueue_script('app-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
-}
-
 /** UPDATE JQUERY VERSION */
 
 function replace_core_jquery_version() {
@@ -15,6 +7,16 @@ function replace_core_jquery_version() {
     wp_register_script( 'jquery', "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js", array(), NULL );
 }
 add_action( 'wp_enqueue_scripts', 'replace_core_jquery_version' );
+
+add_action('wp_enqueue_scripts', 'zigcy_lite_child_enqueue_styles');
+function zigcy_lite_child_enqueue_styles()
+{
+    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
+    wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get('Version'));
+    wp_enqueue_script('app-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
+}
+
+
 
 
 if (!function_exists('remove_tab_review')) {
@@ -164,6 +166,9 @@ function translate_text_strings( $translated_text, $text, $domain ) {
             break;
         case 'Đọc tiếp':
 			$translated_text = __( 'Xem sản phẩm', 'woocommerce' );
+            break;
+        case 'Rấ tiếc, phiên truy cập của bạn đã hết hạn. ':
+			$translated_text = __( 'Rất tiếc, phiên truy cập của bạn đã hết hạn. ', 'woocommerce' );
             break;
 	}
 	return $translated_text;
@@ -431,21 +436,4 @@ function create_footer_two(){
 }
 add_shortcode('SHOW_GOOGLEMAP', 'create_footer_two');
 
-/* SỬ DỤNG STMP GMAIL */
-add_action( 'phpmailer_init', function( $phpmailer ) {
-    $contentText = get_field('from_name_text_gmail','option');
-    $userName = get_field('username_gmail','option');
-    $passWord = get_field('pass_gmail_app','option');
-    if ( !is_object( $phpmailer ) )
-    $phpmailer = (object) $phpmailer;
-    $phpmailer->Mailer     = 'smtp';
-    $phpmailer->Host       = 'smtp.gmail.com';
-    $phpmailer->SMTPAuth   = 1;
-    $phpmailer->Port       = 587;
-    $phpmailer->Username   = ''.$userName.'';
-    $phpmailer->Password   = ''.$passWord.'';
-    $phpmailer->SMTPSecure = 'SSL';
-    $phpmailer->From       = ''.$userName.'';
-    $phpmailer->FromName   = ''.$contentText.'';
-});
 

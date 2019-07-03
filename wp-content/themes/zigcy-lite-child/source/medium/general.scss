@@ -160,3 +160,12 @@ footer{
 #pg-211-1.panel-grid.panel-no-style{
     padding-top: 0px;
 }
+@media screen and (max-width: 768px){
+    .n2-ss-layer.n2-ow{
+        text-align: center!important;
+        .n2-ss-item-content.n2-ow{
+            font-size: 30px!important;
+        }
+    }
+    
+}

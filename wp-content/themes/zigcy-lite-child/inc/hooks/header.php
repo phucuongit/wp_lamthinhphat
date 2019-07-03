@@ -260,7 +260,7 @@ if( ! function_exists('zigcy_lite_mob_nav')){
                 <div class="mob-nav-close"><span class="lnr lnr-cross"></span></div>
             </div>
             <div class="search-wrapp">
-                <?php get_search_form(); ?>
+                <?php get_product_search_form(); ?>
             </div>
             <div class="menu-wrapp-outer">
                 <?php 
