@@ -35,6 +35,6 @@ jQuery(function($){
         var Calmargin = (widthWindow - widthContainer)/2;
         $('.google_map_contact').css({'margin': '0 -' + Calmargin + 'px'});
     });
-
+    $('.header-two .search-form-wrap form.woocommerce-product-search button').html(" ") ;
 
 })

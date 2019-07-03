@@ -461,3 +461,21 @@ function create_footer_two(){
     return $html;
 }
 add_shortcode('SHOW_GOOGLEMAP', 'create_footer_two');
+
+/* SỬ DỤNG STMP GMAIL */
+add_action( 'phpmailer_init', function( $phpmailer ) {
+    $contentText = get_field('from_name_text_gmail','option');
+    $userName = get_field('username_gmail','option');
+    $passWord = get_field('pass_gmail_app','option');
+    if ( !is_object( $phpmailer ) )
+    $phpmailer = (object) $phpmailer;
+    $phpmailer->Mailer     = 'smtp';
+    $phpmailer->Host       = 'smtp.gmail.com';
+    $phpmailer->SMTPAuth   = 1;
+    $phpmailer->Port       = 587;
+    $phpmailer->Username   = ''.$userName.'';
+    $phpmailer->Password   = ''.$passWord.'';
+    $phpmailer->SMTPSecure = 'TLS';
+    $phpmailer->From       = ''.$userName.'';
+    $phpmailer->FromName   = ''.$contentText.'';
+});

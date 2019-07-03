@@ -140,6 +140,7 @@ jQuery(function ($) {
       'margin': '0 -' + Calmargin + 'px'
     });
   });
+  $('.header-two .search-form-wrap form.woocommerce-product-search button').html(" ");
 });
 
 /***/ }),
