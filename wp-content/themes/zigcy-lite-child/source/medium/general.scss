@@ -82,20 +82,23 @@ input#woocommerce-product-search-field-0[type="search"]{
 }
 .header-two .search-form-wrap form.woocommerce-product-search button[type="submit"] {
     position: absolute;
-    top: 0;
+    top: -2px;
     right: 0;
-    width: 55px;
-    height: 55px;
+    width: 54px;
+    height: 54px;
     opacity: 0;
     z-index: 1;
     cursor: pointer;
 }
 .header-two .search-form-wrap form.woocommerce-product-search::after{
     position: absolute;
-    top: 0;
+    top: -2px;
     right: 0;
-    width: 52px;
-    height: 52px;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 /* CUSTOME FOOTER */
 footer{
