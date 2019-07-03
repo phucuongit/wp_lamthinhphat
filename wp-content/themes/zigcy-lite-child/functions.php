@@ -237,24 +237,25 @@ function misha_check_if_selected() {
  
 }
 
-add_action( 'woocommerce_after_checkout_validation', 'misha_one_err', 9999, 2);
+// add_action( 'woocommerce_after_checkout_validation', 'misha_one_err', 9999, 2);
  
-function misha_one_err( $fields, $errors ){
+// function misha_one_err( $fields, $errors ){
  
-	// if any validation errors
-	if( !empty( $errors->get_error_codes() ) ) {
+// 	// if any validation errors
+// 	if( !empty( $errors->get_error_codes() ) ) {
  
-		// remove all of them
-		foreach( $errors->get_error_codes() as $code ) {
-			$errors->remove( $code );
-		}
+// 		// remove all of them
+// 		foreach( $errors->get_error_codes() as $code ) {
+// 			$errors->remove( $code );
+// 		}
  
-		// add our custom one
-		//$errors->add( 'validation', 'Please fill the fields!' );
+// 		// add our custom one
+// 		//$errors->add( 'validation', 'Please fill the fields!' );
  
-	}
+// 	}
  
-}
+// }
+
 /** TẠO THEME OPTION */
 
 if( function_exists('acf_add_options_page') ) {
