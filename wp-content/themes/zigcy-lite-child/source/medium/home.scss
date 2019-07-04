@@ -1,0 +1,13 @@
+.sml-shop-wrap.sml-page-wrap.sml-archive-wrapper{
+    .archive-header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form.woocommerce-ordering{
+        margin: unset!important;
+    }
+}
+ul.product_list_widget{
+    padding-left: 0px!important;
+}

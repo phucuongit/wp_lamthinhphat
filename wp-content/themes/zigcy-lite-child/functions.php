@@ -14,6 +14,8 @@ function zigcy_lite_child_enqueue_styles()
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . '/assets/css/app.css', array(), wp_get_theme()->get('Version'));
     wp_enqueue_script('app-js', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery'), wp_get_theme()->get('Version'));
+    wp_enqueue_style('google-font', "https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap&subset=vietnamese", array(),NULL);
+
 }
 
 

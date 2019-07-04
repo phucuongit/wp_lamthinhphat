@@ -2732,8 +2732,8 @@ module.exports = g;
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! c:\xampp\htdocs\training\lamthinhphat\wp-content\themes\zigcy-lite-child\js\main.js */"./js/main.js");
-module.exports = __webpack_require__(/*! c:\xampp\htdocs\training\lamthinhphat\wp-content\themes\zigcy-lite-child\source\app.scss */"./source/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\training\lamthinhphat\wp-content\themes\zigcy-lite-child\js\main.js */"./js/main.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\training\lamthinhphat\wp-content\themes\zigcy-lite-child\source\app.scss */"./source/app.scss");
 
 
 /***/ })

@@ -23,11 +23,11 @@ get_header();
 							<p  class="search-sorry"><?php esc_html_e( 'Lỗi! Trang không tìm thấy.', 'zigcy-lite' ); ?></p>
 								<p class="search-not-exists"><?php esc_html_e( 'Trang bạn tìm không tồn tại.', 'zigcy-lite' ); ?></p>
 								<div class="home-404-link">
-									<span><?php esc_html_e('Trở về trang ', 'zigcy-lite');?></span><a href="<?php echo esc_url( home_url('/') );?>"><?php esc_html_e('Homepage', 'zigcy-lite');?></a>
+									<span><?php esc_html_e('Trở về ', 'zigcy-lite');?></span><a href="<?php echo esc_url( home_url('/') );?>"><?php esc_html_e('trang chủ', 'zigcy-lite');?></a>
 								</div>
 								<div class="no-results not-found">
 									<?php 
-									get_search_form();
+									get_product_search_form();
 									?>
 								</div>
 
