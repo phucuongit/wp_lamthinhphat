@@ -311,6 +311,10 @@ footer .store-mart-lite-container.clearfix {
   bottom: 0 !important;
 }
 
+.woocommerce div.product p.stock {
+  text-transform: capitalize;
+}
+
 @media (max-width: 767px) {
   .sml-shop-wrap.sml-page-wrap.sml-archive-wrapper .archive-header {
     display: -webkit-box;

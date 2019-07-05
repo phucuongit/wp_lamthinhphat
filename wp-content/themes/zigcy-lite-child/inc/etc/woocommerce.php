@@ -553,6 +553,8 @@ if( ! function_exists('zigcy_lite_product_sidebar') ){
 
 		}else if(is_product()){
 			$woocommerce_layout = get_theme_mod('sml_single_product_layout_sidebars','right-sidebar');
+		}else if(is_product_tag() ){
+			$woocommerce_layout = "";
 		}
 		if( $woocommerce_layout == 'right-sidebar' ){
 			get_sidebar( 'right' );
