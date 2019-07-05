@@ -243,13 +243,15 @@ footer {
 /* POST DETAIL */
 .sml-single-thumb-wrapp {
   text-align: center;
-  height:85px;
+  height:auto;
 }
 .sml-single-thumb-wrapp .blog-date{
-  top: 0px!important;
-  margin: auto;
+  top: 23px!important;
   bottom: 0!important;
 }
 .woocommerce div.product p.stock {
   text-transform: capitalize;
+}
+.post-thumbnail{
+  text-align: center;
 }
