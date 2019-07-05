@@ -49,5 +49,7 @@ jQuery(function($){
         $('.google_map_contact').css({'margin': '0 -' + Calmargin + 'px'});
     });
     $('.header-two .search-form-wrap form.woocommerce-product-search button').html(" ") ;
-
+    $('.sub-toggle').click(function(){
+        $(this).next().toggle();
+    });
 })

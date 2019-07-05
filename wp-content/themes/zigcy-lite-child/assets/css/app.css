@@ -318,6 +318,14 @@ footer .store-mart-lite-container.clearfix {
   text-align: center;
 }
 
+.col-2 .block.footer-widget-1 {
+  border-right: unset !important;
+}
+
+.widget_text h2.widget-title {
+  text-align: center;
+}
+
 @media (max-width: 767px) {
   .sml-shop-wrap.sml-page-wrap.sml-archive-wrapper .archive-header {
     display: -webkit-box;

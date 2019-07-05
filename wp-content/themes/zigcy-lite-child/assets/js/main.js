@@ -154,6 +154,9 @@ jQuery(function ($) {
     });
   });
   $('.header-two .search-form-wrap form.woocommerce-product-search button').html(" ");
+  $('.sub-toggle').click(function () {
+    $(this).next().toggle();
+  });
 });
 
 /***/ }),
