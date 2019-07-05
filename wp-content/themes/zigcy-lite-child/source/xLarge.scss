@@ -2,5 +2,8 @@
 	@import "./large/home.scss";
 }
 @media(max-width: 1199px){
-	
+	.sml-single-post-wrapper.right-sidebar-enabled, .sml-archive-wrapper.right-sidebar-enabled{
+		padding-right: 15px;
+		padding-left:15px;
+	}
 }

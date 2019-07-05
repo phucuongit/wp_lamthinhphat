@@ -276,11 +276,39 @@ footer .store-mart-lite-container.clearfix {
   display: flex;
 }
 
-/* FACEBOOK CHAT */
+/* BUTTON SCOLL TOP */
 
 .sml-scrollup {
   left: 15px;
   right: unset !important;
+}
+
+/* BLOCK DATE UP BLOG */
+
+.blog-date {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.has-post-thumbnail .blog-date-inner {
+  margin: unset !important;
+}
+
+/* POST DETAIL */
+
+.sml-single-thumb-wrapp {
+  text-align: center;
+  height: 85px;
+}
+
+.sml-single-thumb-wrapp .blog-date {
+  top: 0px !important;
+  margin: auto;
+  bottom: 0 !important;
 }
 
 @media (max-width: 767px) {
@@ -345,6 +373,14 @@ footer .store-mart-lite-container.clearfix {
 
   .content-area {
     padding: unset !important;
+  }
+}
+
+@media (max-width: 1199px) {
+  .sml-single-post-wrapper.right-sidebar-enabled,
+  .sml-archive-wrapper.right-sidebar-enabled {
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
