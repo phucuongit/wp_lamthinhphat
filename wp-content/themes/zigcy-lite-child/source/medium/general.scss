@@ -258,8 +258,20 @@ footer {
 .col-2 .block.footer-widget-1{
   border-right: unset!important;
 }
-.widget_text{
-  h2.widget-title{
-    text-align: center;
+/* TEXT FOOTER */
+.footer-widget-2{
+  .widget_text{
+    h2.widget-title{
+      text-align: center;
+    }
+    p{
+      padding-right: 0px!important;
+      text-align: center!important;
+    }
   }
+}
+.plx_pro_cat_slider_section .woocommerce a.button{
+  padding: 0 20px;
+  line-height: 35px;
+  border-radius: 0!important;
 }
